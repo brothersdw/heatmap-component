@@ -31,7 +31,6 @@ services:
         condition: service_healthy
 
   mysql:
-    # image: mysql:8.0.23
     image: mysql:latest
     # M1 chips use line below
     platform: linux/x86_64
