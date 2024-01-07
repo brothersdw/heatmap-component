@@ -1,0 +1,50 @@
+version: "3.0"
+
+volumes:
+  mysql_data:
+    driver: local
+services:
+  heatmap-api:
+    build:
+      context: ./heatmap-api
+    ports:
+      - 3008:3008
+    volumes:
+      - /app/node_modules
+      - ./heatmap-api/:/app
+    depends_on:
+      mysql:
+        condition: service_healthy
+    healthcheck:
+      test: "exit 0"
+
+  heatmap-frontend:
+    build:
+      context: ./heatmap
+    ports:
+      - 3006:3006
+    volumes:
+      - /app/node_modules
+      - ./heatmap/:/app
+    depends_on:
+      heatmap-api:
+        condition: service_healthy
+
+  mysql:
+    # image: mysql:8.0.23
+    image: mysql:latest
+    # M1 chips use line below
+    platform: linux/x86_64
+    environment:
+      MYSQL_ROOT_PASSWORD: testpass
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: mysql_pass
+      MYSQL_DATABASE: heatmapdb
+    ports:
+      - 3307:3306
+    restart: unless-stopped
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./dbConfig.cnf:/etc/mysql/conf.d/custom.cnf
+    healthcheck:
+      test: "exit 0"
