@@ -35,6 +35,8 @@ cp tokens-example.js tokens.js
 
 ### Starting application
 
+- Make sure you are in the `heatmap-component` directory when running `docker-compose`. The below assumes you where in the heatmap directory.
+
 ```shell script
 cd ..
 docker-compose up
