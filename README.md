@@ -35,7 +35,7 @@ cp tokens-example.json tokens.json
 
 ### Starting application
 
-- Make sure you are in the `heatmap-component` directory when running `docker-compose`. The below assumes you where in the `heatmap` directory.
+- Make sure you are in the `heatmap-component` directory when running `docker-compose`. The below assumes you where in the `heatmap/src` directory.
 
 ```shell script
 cd ../..
