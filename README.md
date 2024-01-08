@@ -42,8 +42,11 @@ cd ../..
 docker-compose up
 ```
 
-- Frontend runs on [http://localhost:3006](http://localhost:3006){:target="\_blank"}
-- API runs on [http://localhost:3006](http://localhost:3006){:target="\_blank"}
+<!-- - Frontend runs on [http://localhost:3006](http://localhost:3006/)
+- API runs on [http://localhost:3008](http://localhost:3008/) -->
+
+- Frontend runs on <a href="http://localhost:3006/" target="_blank">localhost:3006</a>
+- API runs on [http://localhost:3008](http://localhost:3008/)
 
 #### For reference if any new migrations are needed in the future
 
