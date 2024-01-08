@@ -29,7 +29,7 @@ cp knexfile-example.js knexfile.js
   - After copying this file you will need to grab a public token from your account at https://mapbox.com and place it in the file.
 
 ```shell script
-cd ../heatmap
+cd ../heatmap/src
 cp tokens-example.js tokens.js
 ```
 
