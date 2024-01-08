@@ -43,7 +43,7 @@ docker-compose up
 ```
 
 - Frontend runs on http://localhost:3006
-- API runs in http://localhost:3008
+- API runs on http://localhost:3008
 
 #### For reference if any new migrations are needed in the future
 
