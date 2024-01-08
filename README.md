@@ -30,7 +30,7 @@ cp knexfile-example.js knexfile.js
 
 ```shell script
 cd ../heatmap/src
-cp tokens-example.js tokens.js
+cp tokens-example.json tokens.json
 ```
 
 ### Starting application
